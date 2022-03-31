@@ -111,16 +111,10 @@ decimal.addEventListener("click", (e) => {
     updateScreen(currNum)
 })
 
-//javascript untuk input persen (tapi belum bisa berjalan)
-inputPercentage = (_percent) => {
-    if(prevNum.includes('%')) {
-        return
-    }
-    prevNum /= 100
-}
+//javascript untuk percent
+const percent = document.querySelector(".percentage")
 
-const percentage = document.querySelector(".percentage");
-percentage.addEventListener("click", (e) => {
-    inputPercentage(e.target.value)
-    updateScreen(prevNum)
+percent.addEventListener("click", () => {
+    currNum = currNum / 100
+    updateScreen(currNum)
 })
