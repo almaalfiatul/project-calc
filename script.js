@@ -3,10 +3,12 @@ const updateScreen = (number) => {
     calculatorScreen.value = number;
 }
 
+//menginisialisasi variable
 let prevNum = "";
 let calcOpr = "";
 let currNum = "";
 
+//javascript untuk input number
 const numbers = document.querySelectorAll(".number");
 
 numbers.forEach((number) => {
@@ -30,6 +32,7 @@ numbers.forEach((number) => {
     });
 });
 
+//javascript untuk input operation
 const oper = document.querySelectorAll(".operator");
 
 oper.forEach((opr) => {
@@ -50,12 +53,14 @@ const inptOpr = (opr) => {
     currNum = "0"
 }
 
+//javascript untuk tombol (=)
 const equalSign = document.querySelector(".equal-sign");
 equalSign.addEventListener("click", () => {
     calculate()
     updateScreen(currNum)
 })
 
+//javascript untuk kalkulasi operation 
 const calculate = () => {
     let result = ""
     switch(calcOpr) {
@@ -78,6 +83,7 @@ const calculate = () => {
     calcOpr = ""
 }
 
+//javascript untuk membersihkan layar
 const clearAll = () => {
     prevNum = ""
     calcOpr = ""
@@ -91,6 +97,7 @@ clearBtn.addEventListener("click", () => {
     updateScreen(currNum)
 })
 
+//javascript untuk input decimal
 inputDecimal = (dot) => {
     if(currNum.includes('.')) {
         return
@@ -104,6 +111,7 @@ decimal.addEventListener("click", (e) => {
     updateScreen(currNum)
 })
 
+//javascript untuk input persen (tapi belum bisa berjalan)
 inputPercentage = (_percent) => {
     if(prevNum.includes('%')) {
         return
