@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Awal css untuk tampilan body kalkulator*/
 .calculator{
     display: flex;
     flex-direction: column;
@@ -19,7 +19,9 @@
     padding: 30px;
     margin-top: 50px;
 }
+/* Akhir css untuk tampilan body kalkulator*/
 
+/* Awal css untuk tampilan screen kalkulator*/
 .calculator-screen{
     width: 100%;
     height: 100px;
@@ -32,8 +34,9 @@
     box-sizing: border-box;
     border-radius: 5px;
 }
+/* akhir css untuk tampilan screen kalkulator*/
 
-
+/* Awal css untuk tampilan tombol kalkulator*/
 .calculator-keys{
     width: 100%;
     border-radius: 5px;
@@ -68,3 +71,4 @@ button:hover{
 .operator:hover, .equal-sign:hover{
     background-color: darkorange;
 }
+/* Akhir css untuk tampilan tombol kalkulator*/
